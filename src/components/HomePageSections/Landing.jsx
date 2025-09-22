@@ -38,40 +38,41 @@ export default function Landing() {
     "/Landing/image1.jpg",
   ];
 
-  const companies = [
-    {
-      name: "Smart School",
-      logo: "./ss.jpeg",
-    },
-    {
-      name: "Swiggy",
-      logo: "./sw.png",
-    },
-    {
-      name: "Cloud Tailor",
-      logo: "./ct.svg",
-    },
-    {
-      name: "AERONERO",
-      logo: "./an.svg",
-    },
-    {
-      name: "HOMEBASE",
-      logo: "./hp.jpeg",
-    },
-    {
-      name: "Wehouse",
-      logo: "./wh.jpeg",
-    },
-    {
-      name: "hitespace",
-      logo: "./hs.jpeg",
-    },
-    {
-      name: "HCC",
-      logo: "./hcc.jpeg",
-    },
-  ];
+ const companies = [
+  {
+    name: "Ecosystem Ventures",
+    logo: "https://ecosystemventures.in/wp-content/uploads/2020/11/logo.jpeg",
+  },
+  {
+    name: "Speciale Invest",
+    logo: "https://pbs.twimg.com/profile_images/1729030357700448256/IB7N_8tm_400x400.png",
+  },
+  {
+    name: "Zeropearl VC",
+    logo: "https://media.licdn.com/dms/image/v2/D560BAQHe_CmXRhLhOA/company-logo_200_200/B56ZZJECCyGcAI-/0/1744982516339/zeropearlvc_logo?e=2147483647&v=beta&t=hhOt_q9QWHX96WE6NcwehFqFv0udZJhCE6eFtlkrE2M",
+  },
+  {
+    name: "Westbridge Capital",
+    logo: "https://resources.pmsbazaar.com/amc-logo/2021/WSA%20Logo.png",
+  },
+  {
+    name: "ISF Network",
+    logo: "https://www.isfnetwork.org/wp-content/uploads/2024/03/isf-logo-festival-2024.png",
+  },
+  {
+    name: "Powered by Huddle",
+    logo: "https://media.licdn.com/dms/image/v2/C510BAQFKt8tWDCcL3Q/company-logo_200_200/company-logo_200_200/0/1630567273224/poweredbyhuddle_logo?e=2147483647&v=beta&t=Vl31LvPdjcLISmyauAPuoJrptvGM8Ie0XIC1gLqw3gM",
+  },
+  {
+    name: "100x VC",
+    logo: "https://cdn.prod.website-files.com/6714bf9ff367de40beb7121f/6714c3e1d76cda9208d977a1_Logo.webp",
+  },
+  {
+    name: "Anthill Ventures",
+    logo: "https://static.theprint.in/wp-content/uploads/2021/08/anthill-ventures-announces-eight-start-ups-for-indus-x-indias-first-global-smart-city-scaling-program.jpg",
+  },
+];
+
 
   const duplicatedCompanies = [...companies, ...companies];
 
@@ -215,17 +216,17 @@ export default function Landing() {
           initial="hidden"
           animate={companiesIsInView ? "visible" : "hidden"}
           variants={companyVariants}
-          className="w-full py-8 flex flex-col lg:flex-row items-center justify-center overflow-hidden"
+          className="w-full py-8 flex flex-col justify-center overflow-hidden"
         >
           <motion.div
             variants={{
               hidden: { opacity: 0, x: -20 },
               visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
             }}
-            className="text-center mb-6 lg:mb-0 lg:mr-8"
+            className="mb-6 lg:mb-0"
           >
-            <h2 className="text-sm lg:text-lg font-bold text-gray-800 min-w-[200px]">
-              Recent Investments
+            <h2 className="text-sm lg:text-2xl font-bold text-gray-800 mb-6">
+              Venture Partners
             </h2>
           </motion.div>
 

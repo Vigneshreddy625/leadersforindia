@@ -11,8 +11,8 @@ import ExpertiseBuild from "../components/other/ExpertiseBuild";
 
 export function Home() {
   return (
-    <div className="relative">
-      <section className="sticky -top-40 z-10 h-[150vh]">
+    <div className="relative max-w-[1500px] mx-auto">
+      <section className="sticky -top-60 z-10 h-[150vh]">
         <Landing />
       </section>
 

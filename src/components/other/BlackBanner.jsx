@@ -89,9 +89,9 @@ export default function BlackBanner() {
       </section>
 
       {/* Second Section - Commercial office space */}
-      <section className="bg-gradient-to-br from-gray-50 to-white relative">
+      <section className="bg-[#f9f7ef] relative">
         <div className="container mx-auto px-4">
-          <div className="py-28 max-lg:pb-24">
+          <div className="pt-8 pb-28 max-lg:pb-24">
             <div className="flex max-lg:flex-col lg:gap-12 justify-between items-center">
               {/* Left Content */}
               <div className="flex flex-col h-full lg:max-w-[544px] gap-2">
