@@ -18,7 +18,6 @@ export default function BlackBanner() {
                       Get to know the team at Nomad Group.
                     </h3>
                   </div>
-
                   <div className="flex flex-col items-center gap-6 lg:gap-9">
                     <div className="text-black text-lg leading-relaxed">
                       <p>
@@ -30,9 +29,8 @@ export default function BlackBanner() {
                         </span>
                       </p>
                     </div>
-
                     <a
-                      className="inline-flex items-center justify-center px-4 py-2 bg-[#3637f4] text-white font-semibold rounded-lg hover:bg-[#2c2dd4] transition-all duration-300 transform hover:scale-105"
+                      className="inline-flex items-center justify-center px-4 py-2 bg-[#3637f4] text-white font-semibold rounded-lg hover:bg-[#2c2dd4] transition-all duration-300"
                       href="/about-us/"
                       aria-label="Go to Learn more"
                     >
@@ -93,7 +91,7 @@ export default function BlackBanner() {
       {/* Second Section - Commercial office space */}
       <section className="bg-gradient-to-br from-gray-50 to-white relative">
         <div className="container mx-auto px-4">
-          <div className="pt-28 pb-28 max-lg:pb-24">
+          <div className="py-28 max-lg:pb-24">
             <div className="flex max-lg:flex-col lg:gap-12 justify-between items-center">
               {/* Left Content */}
               <div className="flex flex-col h-full lg:max-w-[544px] gap-2">
@@ -102,7 +100,6 @@ export default function BlackBanner() {
                     Commercial office space is just the start.
                   </h3>
                 </div>
-
                 <div className="flex flex-col items-start gap-2 lg:gap-3 pt-0 lg:pt-2">
                   <div className="text-black text-lg leading-relaxed">
                     <p>
@@ -113,7 +110,6 @@ export default function BlackBanner() {
                       </span>
                     </p>
                   </div>
-
                   <a
                     className="inline-flex items-center justify-center px-4 py-2 bg-[#3637f4] text-white font-semibold rounded-lg hover:bg-[#2c2dd4] transition-all duration-300 transform hover:scale-105"
                     href="https://nomadgroup.io/solutions/"
@@ -130,7 +126,7 @@ export default function BlackBanner() {
                 <div className="lg:min-w-[500px] w-full flex flex-col justify-center gap-8 lg:gap-12">
                   {/* Stat 1 */}
                   <div className="flex flex-col">
-                    <div className="flex justify-between items-baseline text-white">
+                    <div className="flex justify-between items-baseline text-black">
                       <h2
                         className="text-6xl lg:text-7xl font-bold"
                         style={{ color: "#ede04c" }}
@@ -146,7 +142,7 @@ export default function BlackBanner() {
 
                   {/* Stat 2 */}
                   <div className="flex flex-col">
-                    <div className="flex justify-between items-baseline text-white">
+                    <div className="flex justify-between items-baseline text-black">
                       <h2
                         className="text-6xl lg:text-7xl font-bold"
                         style={{ color: "#ede04c" }}
@@ -162,7 +158,7 @@ export default function BlackBanner() {
 
                   {/* Stat 3 */}
                   <div className="flex flex-col">
-                    <div className="flex justify-between items-baseline text-white">
+                    <div className="flex justify-between items-baseline text-black">
                       <h2
                         className="text-6xl lg:text-7xl font-bold"
                         style={{ color: "#ede04c" }}
@@ -174,6 +170,7 @@ export default function BlackBanner() {
                         buildout turnaround
                       </p>
                     </div>
+                    <div className="w-full h-px bg-gray-600 mt-4"></div>
                   </div>
                 </div>
               </div>

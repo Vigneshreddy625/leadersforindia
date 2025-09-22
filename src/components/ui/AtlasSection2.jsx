@@ -1,7 +1,43 @@
 import React, { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 const AtlasSection2 = ({ section2Transform }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false, amount: 0.3 });
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: 100 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -30 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5, ease: "easeOut" }
+    }
+  };
+
+  const tabVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" }
+    }
+  };
   const [activeTab, setActiveTab] = useState("discover");
 
   const tabs = [

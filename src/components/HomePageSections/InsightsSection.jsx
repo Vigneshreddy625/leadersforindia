@@ -1,6 +1,51 @@
 import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { useInView } from 'framer-motion';
+import { useRef } from 'react';
 
 export default function InsightsSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false, amount: 0.2 });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { 
+      opacity: 0,
+      y: 50
+    },
+    visible: { 
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const imageVariants = {
+    hidden: { 
+      opacity: 0,
+      scale: 0.8
+    },
+    visible: { 
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
   const insights = [
     {
       id: 1,
@@ -23,39 +68,66 @@ export default function InsightsSection() {
   ];
 
   return (
-    <div className="bg-purple-100 mt-[40px]  rounded-2xl  xl:mx-30 p-8 md:p-12 lg:p-16">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-16">Insights</h2>
+    <motion.div 
+      ref={ref}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={containerVariants}
+      className="bg-purple-100 mt-[40px] rounded-2xl xl:mx-30 p-8 md:p-12 lg:p-16 mb-4 lg:mb-12">
+      <motion.div className="max-w-7xl mx-auto">
+        <motion.h2 
+          variants={cardVariants}
+          className="text-4xl md:text-5xl font-bold text-gray-800 mb-16">
+          Insights
+        </motion.h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <motion.div 
+          variants={containerVariants}
+          className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {insights.map((insight) => (
-            <div key={insight.id} className="flex flex-col">
-              <h3 className="text-xl font-medium text-gray-800 mb-4">{insight.title}</h3>
+            <motion.div 
+              key={insight.id} 
+              variants={cardVariants}
+              whileHover={{ y: -10 }}
+              className="flex flex-col">
+              <motion.h3 
+                variants={cardVariants}
+                className="text-xl font-medium text-gray-800 mb-4">
+                {insight.title}
+              </motion.h3>
               
-              <div className="relative mb-4 overflow-hidden rounded-lg aspect-video">
-                <img 
+              <motion.div 
+                variants={imageVariants}
+                className="relative mb-4 overflow-hidden rounded-lg aspect-video">
+                <motion.img 
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
                   src={insight.imageUrl} 
                   alt={insight.alt}
                   className="w-full h-full object-cover"
                 />
-              </div>
+              </motion.div>
               
-              <div className="mt-auto">
-                <button className="flex items-center font-medium text-gray-700 hover:text-gray-900 transition-colors">
+              <motion.div 
+                variants={cardVariants}
+                className="mt-auto">
+                <motion.button 
+                  whileHover={{ x: 5 }}
+                  className="flex items-center font-medium text-gray-700 hover:text-gray-900 transition-colors">
                   <span className="mr-2">READ MORE</span>
                   <ArrowRight size={18} />
-                </button>
-              </div>
-            </div>
+                </motion.button>
+              </motion.div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
         
         <div className="flex justify-center mt-16">
           <button className="px-8 py-3 border border-gray-700 rounded-full text-gray-700 font-medium hover:bg-gray-100 transition-colors">
             MORE STORIES
           </button>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }

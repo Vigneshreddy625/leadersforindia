@@ -1,4 +1,35 @@
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+
 export default function InvestmentFAQ() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false, amount: 0.2 });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { 
+      opacity: 0,
+      y: 20
+    },
+    visible: { 
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
   const faqs = [
     {
       question: "What kind of companies do you invest in?",
@@ -23,34 +54,60 @@ export default function InvestmentFAQ() {
   ];
 
   return (
-    <div className="mx-[20px] xl:mx-20 bg-white">
-      <h1 className='font-[500] text-2xl lg:text-4xl mb-6 lg:mb-10'>The LeadersForIndiaOrg FAQ Starter Pack</h1>
-      <div className='border-b border-black mb-[10px] pb-4'></div>
-      <div className="space-y-4">
+    <motion.div 
+      ref={ref}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={containerVariants}
+      className="mx-[20px] xl:mx-20 bg-white">
+      <motion.h1 
+        variants={itemVariants}
+        className='font-[500] text-2xl lg:text-4xl mb-6 lg:mb-10'>
+        The LeadersForIndiaOrg FAQ Starter Pack
+      </motion.h1>
+      <motion.div 
+        variants={itemVariants}
+        className='border-b border-black mb-[10px] pb-4'>
+      </motion.div>
+      <motion.div 
+        variants={containerVariants}
+        className="space-y-4">
         {faqs.map((faq, index) => (
-          <div
+          <motion.div
             key={index}
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
             className="border-b border-black py-8"
           >
             {/* Two Column Layout - Question and Answer */}
-            <div className="flex flex-col md:flex-row gap-8">
+            <motion.div 
+              className="flex flex-col md:flex-row gap-8"
+              variants={itemVariants}>
               {/* Left Column - Question */}
-              <div className="md:w-1/2">
-                <h2 className="text-3xl font-bold text-gray-900 leading-tight">
+              <motion.div 
+                className="md:w-1/2"
+                variants={itemVariants}>
+                <motion.h2 
+                  className="text-3xl font-bold text-gray-900 leading-tight">
                   {faq.question}
-                </h2>
-              </div>
+                </motion.h2>
+              </motion.div>
               
               {/* Right Column - Answer (always shown) */}
-              <div className="md:w-1/2">
-                <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
+              <motion.div 
+                className="md:w-1/2"
+                variants={itemVariants}>
+                <motion.p 
+                  className="text-lg lg:text-xl text-gray-700 leading-relaxed">
                   {faq.answer}
-                </p>
-              </div>
-            </div>
-          </div>
+                </motion.p>
+              </motion.div>
+            </motion.div>
+          </motion.div>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }

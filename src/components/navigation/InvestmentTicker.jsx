@@ -35,7 +35,7 @@ export default function InvestmentTicker({ showTicker, setShowTicker }) {
 
     return (
         <div
-            className={`fixed top-0 left-0 right-0 z-50 bg-gray-800 text-white py-2 overflow-hidden h-[30px] ${vanillaSansClass}`}
+            className={`fixed top-0 left-0 right-0 z-50 bg-black text-white py-2 overflow-hidden h-[30px] ${vanillaSansClass}`}
         >
             <div className="flex">
                 <div
@@ -55,7 +55,7 @@ export default function InvestmentTicker({ showTicker, setShowTicker }) {
                 </div>
             </div>
             <button
-                className="absolute right-0 top-1/2 transform -translate-y-1/2 text-white p-2 px-4 cursor-pointer bg-gray-800"
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 text-white p-2 px-4 cursor-pointer bg-black"
                 onClick={() => setShowTicker(false)}
             >
                 <X className="w-4 h-4" />

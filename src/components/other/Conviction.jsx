@@ -2,8 +2,39 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Marquee from "react-fast-marquee";
 import ImageHoverOverlay from '../ui/ImageOverlay';
+import { motion } from 'framer-motion';
+import { useInView } from 'framer-motion';
+import { useRef } from 'react';
 
 function Conviction() {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: false, amount: 0.3 });
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+                duration: 0.6
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { 
+            opacity: 0, 
+            x: -50
+        },
+        visible: { 
+            opacity: 1, 
+            x: 0,
+            transition: {
+                duration: 0.6,
+                ease: "easeOut"
+            }
+        }
+    };
 
     let convictionCompanyData = [
         {
@@ -44,17 +75,36 @@ function Conviction() {
     ]
 
     return (
-        <div className='bg-[#f9f7ef] text-black py-20 flex w-full flex-col'>
-            <div className='px-10 lg:px-12  w-full flex flex-col'>
-                <h1 className='text-[45px] lg:text-6xl font-semibold'>Built with Conviction</h1>
-                <h3 className='mt-6 lg:mt-32 font-semibold text-xl lg:text-2xl text-blue-500'>
+        <motion.div 
+            ref={ref}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            variants={containerVariants}
+            className='bg-gradient-to-br from-gray-50 to-white text-black py-8 flex w-full flex-col'>
+            <motion.div 
+                variants={itemVariants}
+                className='px-10 lg:px-12 w-full flex justify-between items-center'>
+                <motion.h1 
+                    className='text-[45px] lg:text-6xl font-semibold'>
+                    Built with Conviction
+                </motion.h1>
+                <motion.div 
+                    variants={itemVariants}
+                    className="flex flex-col items-center justify-center">
+                <motion.h3 
+                    variants={itemVariants}
+                    className='mt-6 font-semibold text-xl lg:text-2xl text-blue-500'>
                     One of One. From Day One. All In.
-                </h3>
-                <p className='mt-6  text-lg lg:text-xl leading-relaxed lg:max-w-lg'>
+                </motion.h3>
+                
+                <motion.p 
+                    variants={itemVariants}
+                    className='mt-6 text-lg lg:text-xl leading-relaxed lg:max-w-lg'>
                     These are the core principles that allow us to bring our undivided focus and true partnership ethos to every founder. When we go, we go all in.
-                </p>
+                </motion.p>
                 <Link className='underline mt-6'>Read our philosophy</Link>
-            </div>
+                </motion.div>
+            </motion.div>
             <div className='my-10'></div>
             <Marquee
                 gradient={false}
@@ -76,7 +126,7 @@ function Conviction() {
                     }
                 </div>
             </Marquee>
-        </div>
+        </motion.div>
     )
 }
 
