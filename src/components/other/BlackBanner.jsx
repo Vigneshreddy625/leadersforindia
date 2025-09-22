@@ -7,20 +7,20 @@ export default function BlackBanner() {
   return (
     <div style={{ backgroundColor: "#1b1a1b" }}>
       {/* First Section - Get to know the team */}
-      <section className="bg-[#1b1a1b] relative max-xl:pb-52 mb-[-1px]">
+      <section className="bg-[#f9f7ef] relative max-xl:pb-52 mb-[-1px]">
         <div className="container mx-auto px-4">
           <div className="pt-20 pb-20">
             <div className="relative flex flex-col items-center justify-center overflow-hidden text-center h-full lg:p-16 py-10 px-6 rounded-lg lg:h-[440px]">
               <div className="lg:max-w-[528px] mx-auto flex flex-col items-center justify-center gap-9 transition-all">
                 <div className="flex flex-col gap-6">
                   <div className="w-full max-md:flex max-md:flex-col max-md:gap-3 relative text-center">
-                    <h3 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
+                    <h3 className="text-4xl lg:text-5xl font-bold text-black leading-tight">
                       Get to know the team at Nomad Group.
                     </h3>
                   </div>
 
                   <div className="flex flex-col items-center gap-6 lg:gap-9">
-                    <div className="text-white text-lg leading-relaxed">
+                    <div className="text-black text-lg leading-relaxed">
                       <p>
                         <span className="font-normal">
                           We're a tight-knit team of real estate agents in New
@@ -91,20 +91,20 @@ export default function BlackBanner() {
       </section>
 
       {/* Second Section - Commercial office space */}
-      <section className="bg-[#1b1a1b] relative">
+      <section className="bg-gradient-to-br from-gray-50 to-white relative">
         <div className="container mx-auto px-4">
           <div className="pt-28 pb-28 max-lg:pb-24">
             <div className="flex max-lg:flex-col lg:gap-12 justify-between items-center">
               {/* Left Content */}
               <div className="flex flex-col h-full lg:max-w-[544px] gap-2">
                 <div className="w-full max-md:flex max-md:flex-col max-md:gap-3 relative">
-                  <h3 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
+                  <h3 className="text-4xl lg:text-5xl font-bold text-black leading-tight">
                     Commercial office space is just the start.
                   </h3>
                 </div>
 
                 <div className="flex flex-col items-start gap-2 lg:gap-3 pt-0 lg:pt-2">
-                  <div className="text-white text-lg leading-relaxed">
+                  <div className="text-black text-lg leading-relaxed">
                     <p>
                       <span className="font-normal">
                         We're not just commercial property brokers, we're

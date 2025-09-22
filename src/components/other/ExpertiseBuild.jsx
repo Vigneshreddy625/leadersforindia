@@ -36,7 +36,7 @@ function ExpertiseBuild() {
     ]
 
     return (
-        <div className='bg-[#00001b] text-white py-32 flex w-full flex-col'>
+        <div className='bg-[#f9f7ef] text-black py-32 flex w-full flex-col'>
             <div className='px-10 lg:px-12  w-full flex flex-col'>
                 <h1 className='text-[45px] lg:text-6xl font-semibold'>Built on Expertise</h1>
                 <p className='mt-6  mb-10 text-lg lg:text-xl leading-relaxed lg:max-w-lg'>
@@ -50,7 +50,7 @@ function ExpertiseBuild() {
                             <div key={index} className="flex flex-col bg-[#1e1e2e] w-full md:w-[16.3vw] overflow-hidden shadow-lg relative transition-all duration-300 ease-in-out brightness-65 hover:scale-105 hover:brightness-100 cursor-pointer">
                                 <img src={data.imageSrc} alt={data.title} className="w-full h-48 md:h-64 object-cover" />
                                 <div className="p-2 flex flex-col flex-grow absolute bottom-0 bg-gradient-to-t from-black to-transparent w-full pt-5">
-                                    <h4 className="text-smlg:text-lg font-medium mb-2">{data.title}</h4>
+                                    <h4 className="text-smlg:text-lg font-medium mb-2 text-white">{data.title}</h4>
                                 </div>
                             </div>
                         ))

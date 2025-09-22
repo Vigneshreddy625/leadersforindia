@@ -3,7 +3,7 @@ import vennD from '../../assets/vennD.png';
 
 const LuxHero = () => {
     return (
-        <div className="bg-[#16191e] text-white min-h-screen flex flex-col justify-center items-center px-4 py-8">
+        <div className="bg-gradient-to-br from-gray-50 to-white text-black min-h-screen flex flex-col justify-center items-center px-4 py-8">
             {/* Desktop Layout */}
             <div className="hidden md:block w-full max-w-6xl">
                 <div className="text-center mb-16">

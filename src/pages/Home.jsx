@@ -1,6 +1,6 @@
 // pages/Home.jsx
 import React from "react";
-import PortfolioSection from "../components/HomePageSections/PortfolioSection";
+// import PortfolioSection from "../components/HomePageSections/PortfolioSection";
 import FounderTestimonials from "../components/HomePageSections/FounderTestimonials";
 import InvestmentFAQ from "../components/HomePageSections/InvestmentFAQ";
 import InsightsSection from "../components/HomePageSections/InsightsSection";
@@ -20,7 +20,7 @@ function Home() {
       <LuxHero />
       <Conviction />
       <OverlaySection />
-      <PortfolioSection />
+      {/* <PortfolioSection /> */}
       <FounderTestimonials />
       <InvestmentFAQ />
       <InsightsSection />

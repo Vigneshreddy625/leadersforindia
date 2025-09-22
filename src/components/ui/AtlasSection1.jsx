@@ -86,14 +86,14 @@ const AtlasSection1 = ({ children }) => {
   };
 
   return (
-    <div className="w-full bg-[#070f18] relative pt-5">
+    <div className="w-full bg-gradient-to-br from-gray-50 to-white text-black relative pt-16">
       <div className="w-full absolute z-10 flex items-center justify-center ">
-        <h1 className="px-10  max-w-7xl text-2xl lg:text-4xl font-[350] text-white text-start lg:-ml-14">
+        <h1 className="px-10  max-w-7xl text-2xl lg:text-4xl font-[350] text-black text-start lg:-ml-14">
           Exceptional entrepreneurs and scientists translate innovation into <br />
           <span className="text-cyan-400">novel medicines</span>.
         </h1>
       </div>
-      <div className="sticky top-0 w-full min-h-[100vh] bg-[#070f18] flex items-center justify-center">
+      <div className="sticky top-0 w-full min-h-[100vh] bg-gradient-to-br from-gray-50 to-white text-black flex items-center justify-center">
         {/* Inject custom styles */}
         <style dangerouslySetInnerHTML={{ __html: swiperStyles }} />
         <div className="w-full h-full relative z-0">
@@ -112,7 +112,7 @@ const AtlasSection1 = ({ children }) => {
             onSwiper={setSwiperInstance}
             onSlideChange={handleSlideChange}
             modules={[EffectCoverflow, Pagination, Navigation]}
-            className="w-full h-full swiper-container"
+            className="w-full h-full swiper-container backdrop-blur-xl"
             data-aos="fade-in"
             data-aos-delay="600"
             data-aos-duration="1000"
@@ -125,10 +125,10 @@ const AtlasSection1 = ({ children }) => {
                       <h4 className="subtitle md:text-lg text-cyan-400 mb-6 font-[400]">
                         {slide.subtitle}
                       </h4>
-                      <h3 className="title text-[28px] md:text-5xl lg:text-7xl font-light text-white mb-8 lg:leading-[1]">
+                      <h3 className="title text-[28px] md:text-5xl lg:text-7xl font-light text-black mb-8 lg:leading-[1]">
                         {slide.title}
                       </h3>
-                      <div className="copy text-gray-300 text-sm md:text-xl leading-relaxed max-w-2xl">
+                      <div className="copy text-gray-800 text-sm md:text-xl leading-relaxed max-w-2xl">
                         {slide.copy}
                       </div>
                     </div>

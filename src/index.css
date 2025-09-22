@@ -57,3 +57,18 @@
 .swiper-button-prev {
   z-index: 1 !important;
 }
+
+.carousel-controls {
+  bottom: 20px;
+}
+
+.progress-bar {
+  background-color: white;
+}
+.progress-fill {
+  background-color: black;
+}
+.arrow-button {
+  background-color: rgba(28, 27, 27, 0.7);
+  color: black;
+}

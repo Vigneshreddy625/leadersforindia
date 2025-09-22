@@ -44,7 +44,7 @@ function Conviction() {
     ]
 
     return (
-        <div className='bg-[#00001b] text-white py-20 flex w-full flex-col'>
+        <div className='bg-[#f9f7ef] text-black py-20 flex w-full flex-col'>
             <div className='px-10 lg:px-12  w-full flex flex-col'>
                 <h1 className='text-[45px] lg:text-6xl font-semibold'>Built with Conviction</h1>
                 <h3 className='mt-6 lg:mt-32 font-semibold text-xl lg:text-2xl text-blue-500'>

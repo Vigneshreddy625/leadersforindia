@@ -1,11 +1,11 @@
 
 export default function Landing() {
     const images = [
-        "https://web-assets.zendesk.com/is/image/zendesk/Photo_Hero_004-1?fmt=webp-alpha&qlt=65",
-        "https://web-assets.zendesk.com/is/image/zendesk/Photo_Hero_002-1?fmt=webp-alpha&qlt=65",
-        "/mainPic.png",
-        "https://web-assets.zendesk.com/is/image/zendesk/Photo_Hero_001-1?fmt=webp-alpha&qlt=65",
-        "https://web-assets.zendesk.com/is/image/zendesk/Photo_Hero_003-1?fmt=webp-alpha&qlt=65"
+        "/Landing/image5.jpg",
+        "/Landing/image4.jpg",
+        "/Landing/image3.jpg",
+        "/Landing/image2.jpg",
+        "/Landing/image1.jpg"
     ];
 
     const companies = [
