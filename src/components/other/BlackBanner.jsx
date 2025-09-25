@@ -7,7 +7,126 @@ export default function BlackBanner() {
   return (
     <div style={{ backgroundColor: "#1b1a1b" }}>
       {/* First Section - Get to know the team */}
-      <section className="bg-[#f9f7ef] relative max-xl:pb-52 mb-[-1px]">
+
+
+      {/* Second Section - Commercial office space */}
+      <section className="bg-[#f9f7ef] relative">
+        <div className="container mx-auto px-4">
+          <div className="pt-8 pb-28 max-lg:pb-24">
+            <div className="flex max-lg:flex-col lg:gap-12 justify-between items-center">
+              {/* Left Content */}
+              <div className="flex flex-col h-full lg:max-w-[544px] gap-2">
+                <div className="w-full max-md:flex max-md:flex-col max-md:gap-3 relative">
+                  <h3 className="text-4xl lg:text-5xl font-bold text-black leading-tight">
+                    Strength in numbers Backed by real results
+                  </h3>
+                </div>
+                <div className="flex flex-col items-start gap-2 lg:gap-3 pt-0 lg:pt-2">
+                  <div className="text-black text-lg leading-relaxed">
+                    <p>
+                      <span className="font-normal">
+                        At LIO, we’re more than a network — we’re a trusted community of investors, 
+                        founders, and operators. Together, we’ve evaluated hundreds of opportunities 
+                        and deployed capital into some of India’s fastest-growing startups.
+                      </span>
+                    </p>
+                  </div>
+                  <a
+                    className="inline-flex items-center justify-center px-4 py-2 bg-[#3637f4] text-white font-semibold rounded-lg hover:bg-[#2c2dd4] transition-all duration-300 transform hover:scale-105"
+                    href="https://nomadgroup.io/solutions/"
+                    target="_self"
+                    aria-label="Go to Learn more"
+                  >
+                    Join our Community
+                  </a>
+                </div>
+              </div>
+
+              {/* Stats Panel */}
+              <div className="lg:w-auto w-full lg:flex-shrink-0">
+                <div className="lg:min-w-[500px] w-full flex flex-col justify-center gap-8 lg:gap-12">
+                  {/* Stat 1 */}
+                  <div className="flex flex-col">
+                    <div className="flex justify-between items-baseline text-black">
+                      <h2
+                        className="text-6xl lg:text-7xl font-bold"
+                        style={{ color: "#ede04c" }}
+                      >
+                        300<span className="text-5xl lg:text-6xl">+</span>
+                      </h2>
+                      <p className="text-lg lg:text-xl font-normal">
+                        tenant buildouts
+                      </p>
+                    </div>
+                    <div className="w-full h-px bg-gray-600 mt-4"></div>
+                  </div>
+
+                  {/* Stat 2 */}
+                  <div className="flex flex-col">
+                    <div className="flex justify-between items-baseline text-black">
+                      <h2
+                        className="text-6xl lg:text-7xl font-bold"
+                        style={{ color: "#ede04c" }}
+                      >
+                        2<span className="text-5xl lg:text-6xl">M+</span>
+                      </h2>
+                      <p className="text-lg lg:text-xl font-normal">
+                        square feet under management
+                      </p>
+                    </div>
+                    <div className="w-full h-px bg-gray-600 mt-4"></div>
+                  </div>
+
+                  {/* Stat 3 */}
+                  <div className="flex flex-col">
+                    <div className="flex justify-between items-baseline text-black">
+                      <h2
+                        className="text-6xl lg:text-7xl font-bold"
+                        style={{ color: "#ede04c" }}
+                      >
+                        90
+                        <span className="text-5xl lg:text-6xl">&nbsp;day</span>
+                      </h2>
+                      <p className="text-lg lg:text-xl font-normal">
+                        buildout turnaround
+                      </p>
+                    </div>
+                    <div className="w-full h-px bg-gray-600 mt-4"></div>
+                  </div>
+
+                  {/* Stat 4 */}
+                  <div className="flex flex-col">
+                    <div className="flex justify-between items-baseline text-black">
+                      <h2
+                        className="text-6xl lg:text-7xl font-bold"
+                        style={{ color: "#ede04c" }}
+                      >
+                        Stat 4
+                        <span className="text-5xl lg:text-6xl">&nbsp;day</span>
+                      </h2>
+                      <p className="text-lg lg:text-xl font-normal">
+                        buildout turnaround
+                      </p>
+                    </div>
+                    <div className="w-full h-px bg-gray-600 mt-4"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Background Decorative Element */}
+        <div className="absolute bottom-0 left-0 lg:w-80 w-40 opacity-80">
+          <img
+            className="object-contain w-full h-full"
+            src={jb}
+            alt="Decorative background element"
+          />
+        </div>
+      </section>
+
+            <section className="bg-[#f9f7ef] relative max-xl:pb-52 mb-[-1px]">
         <div className="container mx-auto px-4">
           <div className="pt-20 pb-20">
             <div className="relative flex flex-col items-center justify-center overflow-hidden text-center h-full lg:p-16 py-10 px-6 rounded-lg lg:h-[440px]">
@@ -85,106 +204,6 @@ export default function BlackBanner() {
               alt="Studio office space"
             />
           </div>
-        </div>
-      </section>
-
-      {/* Second Section - Commercial office space */}
-      <section className="bg-[#f9f7ef] relative">
-        <div className="container mx-auto px-4">
-          <div className="pt-8 pb-28 max-lg:pb-24">
-            <div className="flex max-lg:flex-col lg:gap-12 justify-between items-center">
-              {/* Left Content */}
-              <div className="flex flex-col h-full lg:max-w-[544px] gap-2">
-                <div className="w-full max-md:flex max-md:flex-col max-md:gap-3 relative">
-                  <h3 className="text-4xl lg:text-5xl font-bold text-black leading-tight">
-                    Commercial office space is just the start.
-                  </h3>
-                </div>
-                <div className="flex flex-col items-start gap-2 lg:gap-3 pt-0 lg:pt-2">
-                  <div className="text-black text-lg leading-relaxed">
-                    <p>
-                      <span className="font-normal">
-                        We're not just commercial property brokers, we're
-                        partners in each client's growth. We help fast-moving
-                        companies secure space on-time and on-budget.
-                      </span>
-                    </p>
-                  </div>
-                  <a
-                    className="inline-flex items-center justify-center px-4 py-2 bg-[#3637f4] text-white font-semibold rounded-lg hover:bg-[#2c2dd4] transition-all duration-300 transform hover:scale-105"
-                    href="https://nomadgroup.io/solutions/"
-                    target="_self"
-                    aria-label="Go to Learn more"
-                  >
-                    Learn more
-                  </a>
-                </div>
-              </div>
-
-              {/* Stats Panel */}
-              <div className="lg:w-auto w-full lg:flex-shrink-0">
-                <div className="lg:min-w-[500px] w-full flex flex-col justify-center gap-8 lg:gap-12">
-                  {/* Stat 1 */}
-                  <div className="flex flex-col">
-                    <div className="flex justify-between items-baseline text-black">
-                      <h2
-                        className="text-6xl lg:text-7xl font-bold"
-                        style={{ color: "#ede04c" }}
-                      >
-                        300<span className="text-5xl lg:text-6xl">+</span>
-                      </h2>
-                      <p className="text-lg lg:text-xl font-normal">
-                        tenant buildouts
-                      </p>
-                    </div>
-                    <div className="w-full h-px bg-gray-600 mt-4"></div>
-                  </div>
-
-                  {/* Stat 2 */}
-                  <div className="flex flex-col">
-                    <div className="flex justify-between items-baseline text-black">
-                      <h2
-                        className="text-6xl lg:text-7xl font-bold"
-                        style={{ color: "#ede04c" }}
-                      >
-                        2<span className="text-5xl lg:text-6xl">M+</span>
-                      </h2>
-                      <p className="text-lg lg:text-xl font-normal">
-                        square feet under management
-                      </p>
-                    </div>
-                    <div className="w-full h-px bg-gray-600 mt-4"></div>
-                  </div>
-
-                  {/* Stat 3 */}
-                  <div className="flex flex-col">
-                    <div className="flex justify-between items-baseline text-black">
-                      <h2
-                        className="text-6xl lg:text-7xl font-bold"
-                        style={{ color: "#ede04c" }}
-                      >
-                        90
-                        <span className="text-5xl lg:text-6xl">&nbsp;day</span>
-                      </h2>
-                      <p className="text-lg lg:text-xl font-normal">
-                        buildout turnaround
-                      </p>
-                    </div>
-                    <div className="w-full h-px bg-gray-600 mt-4"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Background Decorative Element */}
-        <div className="absolute bottom-0 left-0 lg:w-80 w-40 opacity-80">
-          <img
-            className="object-contain w-full h-full"
-            src={jb}
-            alt="Decorative background element"
-          />
         </div>
       </section>
     </div>
